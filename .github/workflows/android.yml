@@ -52,8 +52,6 @@ jobs:
             -Dglx=disabled \
             -Ddri-drivers= \
             -Dgallium-drivers=swrast,zink,virgl \
-            -Dvulkan-drivers=swrast,freedreno \
-            -Dfreedreno-kgsl=true \
             -Dosmesa=true \
             -Dglx-direct=true \
             -Dopengl=true \
