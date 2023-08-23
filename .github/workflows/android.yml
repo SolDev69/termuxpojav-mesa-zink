@@ -56,7 +56,6 @@ jobs:
             -Dvulkan-drivers=swrast,freedreno \
             -Dfreedreno-kgsl=true \
             -Dosmesa=true \
-            -Dglvnd=true \
             -Dglx-direct=true \
             -Dopengl=true \
             -Dshared-glapi=false
