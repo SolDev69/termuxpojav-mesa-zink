@@ -45,17 +45,21 @@ jobs:
             -Dplatforms=android \
             -Dplatform-sdk-version=26 \
             -Dandroid-stub=true \
-            -Dllvm=disabled \
-            -Dxlib-lease=disabled \
-            -Degl=disabled \
-            -Dgbm=disabled \
-            -Dglx=disabled \
-            -Dglx-direct=true \
-            -Dopengl=true \
+            -Dcpp_rtti=false \
+            -Dgbm=enabled \
+            -Degl=enabled \
+            -Dgles1=disabled \
+            -Dgles2=enabled \
+            -Ddri3=enabled \
+            -Dllvm=enabled \
+            -Dshared-llvm=disabled \
+            -Dglx=dri \
+            -Ddri-drivers= \
+            -Dgallium-drivers=swrast,zink,virgl \
+            -Dvulkan-drivers=swrast,freedreno \
+            -Dfreedreno-kgsl=true \
             -Dosmesa=true \
-            -Dvulkan-drivers= \
-            -Dgallium-drivers=zink \
-            -Dshared-glapi=false
+            -Dglvnd=true
           ninja -C "build-android-${{matrix.arch}}" install
           # cp "build-android-${{matrix.arch}}/src/gallium/drivers/mesa/libzinkk.a" /tmp/mesa/lib/
           rm /tmp/mesa/lib/libOSMesa.so /tmp/mesa/lib/libOSMesa.so.8
