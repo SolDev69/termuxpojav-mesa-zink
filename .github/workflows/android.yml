@@ -57,7 +57,7 @@ jobs:
             -Dfreedreno-kgsl=true \
             -Dosmesa=true \
             -Dglvnd=true \
-            -Dglx_direct=true \
+            -Dglx-direct=true \
             -Dopengl=true \
             -Dshared-glapi=false
           ninja -C "build-android-${{matrix.arch}}" install
