@@ -46,7 +46,7 @@ jobs:
             -Dplatform-sdk-version=26 \
             -Dandroid-stub=true \
             -Dcpp_rtti=false \
-            -Dgbm=enabled \
+            -Dgbm=disabled \
             -Degl=disabled \
             -Dllvm=disabled \
             -Dglx=disabled \
