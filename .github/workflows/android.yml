@@ -48,8 +48,7 @@ jobs:
             -Dcpp_rtti=false \
             -Dgbm=enabled \
             -Degl=disabled \
-            -Dllvm=enabled \
-            -Dshared-llvm=disabled \
+            -Dllvm=disabled \
             -Dglx=disabled \
             -Ddri-drivers= \
             -Dgallium-drivers=swrast,zink,virgl \
