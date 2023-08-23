@@ -48,9 +48,6 @@ jobs:
             -Dcpp_rtti=false \
             -Dgbm=enabled \
             -Degl=disabled \
-            -Dgles1=disabled \
-            -Dgles=disabled \
-            -Ddri3=disabled \
             -Dllvm=enabled \
             -Dshared-llvm=disabled \
             -Dglx=disabled \
@@ -61,7 +58,8 @@ jobs:
             -Dosmesa=true \
             -Dglvnd=true \
             -Dglx_direct=true \
-            -Dopengl=true
+            -Dopengl=true \
+            -Dshared-glapi=false
           ninja -C "build-android-${{matrix.arch}}" install
           # cp "build-android-${{matrix.arch}}/src/gallium/drivers/mesa/libzinkk.a" /tmp/mesa/lib/
           rm /tmp/mesa/lib/libOSMesa.so /tmp/mesa/lib/libOSMesa.so.8
